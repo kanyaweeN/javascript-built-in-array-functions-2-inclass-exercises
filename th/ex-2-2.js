@@ -9,10 +9,17 @@
 
 // Start coding here
 function findNLowestNumber(arrOfNumbers, n) {
-  //   arrOfNumbers.splice(n);
-  const sortedArray = arrOfNumbers.sort((a, b) => a - b);
-  return sortedArray.slice(0, n);
+  //   const sortedArray = arrOfNumbers.sort((a, b) => a - b);
+  //   return sortedArray.slice(0, n);
+
+  return arrOfNumbers.sort((a, b) => a - b).splice(0, n);
 }
+
+//.splice   -> เปลี่ยนแปลงข้อมูล array ต้นฉบับ
+//.slice    -> ไม่ได้เปลี่ยนแปรง array ต้นฉบับ
+
+//.sort() จะเรียงแบบ string
+//.sort((a, b) => a - b) จะเรียงแบบ int
 
 const arrOfNumbers1 = [10, 3, 55, 0, 18];
 let result1 = findNLowestNumber(arrOfNumbers1, 3);
