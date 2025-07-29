@@ -9,8 +9,8 @@
 
 // Start coding here
 function findIfItemExist(products, productName) {
-  const isFind = products.indexOf(productName);
-  if (isFind > -1) {
+  const isFind = products.includes(productName);
+  if (isFind) {
     return `พบ ${productName} ในรายการสินค้า`;
   } else {
     return `ไม่พบ ${productName} ในรายการสินค้า`;
